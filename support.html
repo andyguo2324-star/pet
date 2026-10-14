@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Pet Diary</title>
+<meta name="description" content="Support and FAQ for the Pet Diary iOS app. Contact us for help with records, photos, subscriptions and data.">
+<style>
+  :root {
+    --accent: #F69431;
+    --ink: #141414;
+    --secondary: #6f6f76;
+    --bg: #F6F6F8;
+    --card: #ffffff;
+    --border: rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #F69431;
+      --ink: #F5F5F7;
+      --secondary: #a8a8ad;
+      --bg: #0f0f11;
+      --card: #1c1c1f;
+      --border: rgba(255,255,255,.08);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 20px 72px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft JhengHei", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .paw {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 22px;
+  }
+  h1 { font-size: 24px; margin: 0; letter-spacing: -.01em; }
+  .updated { color: var(--secondary); font-size: 13px; margin: 4px 0 22px 56px; }
+  .toggle { display: flex; gap: 8px; margin: 0 0 22px 56px; }
+  .toggle button {
+    font: inherit; font-size: 14px; cursor: pointer;
+    padding: 6px 14px; border-radius: 999px;
+    border: 1px solid var(--border); background: var(--card); color: var(--secondary);
+  }
+  .toggle button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  main { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 26px 24px; }
+  h2 { font-size: 17px; margin: 26px 0 8px; }
+  h2:first-of-type { margin-top: 4px; }
+  p, li { color: var(--ink); }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  .muted { color: var(--secondary); }
+  a { color: var(--accent); }
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    padding: 12px 14px; border-radius: 10px; margin: 14px 0;
+  }
+  footer { text-align: center; color: var(--secondary); font-size: 13px; margin-top: 26px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="paw">🐾</div>
+    <h1 id="title">Support</h1>
+  </header>
+  <p class="updated" id="updated">Last updated: October 14, 2026</p>
+  <div class="toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-zh" onclick="setLang('zh')">简体</button>
+    <button id="btn-zh-hant" onclick="setLang('zh-hant')">繁體</button>
+  </div>
+
+  <!-- ============ ENGLISH ============ -->
+  <main id="lang-en">
+    <div class="callout">
+      <strong>Need help?</strong> Email us at
+      <a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a>.
+      We usually reply within 2 business days.
+    </div>
+
+    <p>Pet Diary is a pet health and diary app for iPhone. Below are the questions we get most
+    often. If yours is not here, just email us.</p>
+
+    <h2>Where is my data stored? Is it uploaded?</h2>
+    <p>All your pet profiles, photos, records, diary entries and recorded pet sounds are stored
+    <strong>only on this device</strong>. Nothing is uploaded to us or to any server — we do not
+    operate a backend and we cannot see your data. See our
+    <a href="./privacy.html">Privacy Policy</a> for details.</p>
+
+    <h2>How do I back up my data or move it to a new iPhone?</h2>
+    <p>Because everything lives in the app's local storage, your data is included in a full
+    iPhone backup (iCloud Backup or a computer backup) and is restored together with the app.
+    You can also export records in <em>Settings → Export</em> (PDF / Excel report, Pet Diary Pro feature).</p>
+
+    <h2>How do I cancel my subscription?</h2>
+    <p>Open <em>Settings → Apple ID → Subscriptions</em> on your iPhone (or tap
+    <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage
+    Subscription</a>) and cancel from there. Cancelling only stops the next renewal — you keep
+    access until the end of the period you already paid for. Deleting the app does not cancel a
+    subscription.</p>
+
+    <h2>I paid but the features are locked. What do I do?</h2>
+    <p>Open <em>Settings → Pet Diary Pro → Restore Purchases</em>. Make sure you are signed in with
+    the same Apple ID you used for the purchase.</p>
+
+    <h2>What is free, and what needs Pet Diary Pro?</h2>
+    <p>Free: 1 pet, all records, reminders, photo albums, the diary, the knowledge base and nearby
+    services. Pet Diary Pro unlocks unlimited pets and PDF / Excel report export.</p>
+
+    <h2>Why does the app ask for these permissions?</h2>
+    <ul>
+      <li><strong>Photos</strong> — to add pictures to your pet's profile, albums and diary. Picked
+      photos are copied into the app.</li>
+      <li><strong>Location</strong> — to find nearby pet hospitals and shops, and to attach a place
+      to a diary entry. Optional; everything else works without it.</li>
+      <li><strong>Microphone</strong> — only to record your pet's voice so you can play it back from
+      the cover. Optional.</li>
+      <li><strong>Notifications</strong> — for vaccine, deworming and other reminders you create.
+      Optional.</li>
+    </ul>
+    <p>You can change any of these at any time in <em>iOS Settings → Pet Diary</em>.</p>
+
+    <h2>How do I delete everything?</h2>
+    <p><em>Settings → Erase All Data</em> removes all pets, photos, records and diary entries from
+    the device. This cannot be undone — export a report first if you want a copy. Deleting the app
+    also removes all local data.</p>
+
+    <h2>Is the health information medical advice?</h2>
+    <p>No. The built-in articles and care suggestions are general pet-care information and
+    <strong>cannot replace a veterinarian's diagnosis</strong>. If your pet seems unwell, please
+    contact a vet.</p>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a><br>
+    When reporting a problem, telling us your iPhone model, iOS version and app version helps us
+    help you faster.</p>
+  </main>
+
+  <!-- ============ 简体中文 ============ -->
+  <main id="lang-zh" hidden>
+    <div class="callout">
+      <strong>需要帮助？</strong>发邮件到
+      <a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a>，
+      我们通常会在 1–2 个工作日内回复。
+    </div>
+
+    <p>Pet Diary（宠物日记）是一款 iPhone 上的宠物健康记录与日记 App。下面是大家最常问的问题，
+    如果这里没有你要的答案，直接邮件联系我们就好。</p>
+
+    <h2>我的数据存在哪里？会上传吗？</h2>
+    <p>宠物档案、照片、各类记录、日记和录制的宠物叫声<strong>只保存在这台设备上</strong>，
+    不会上传给我们或任何服务器——我们没有后端，也看不到你的数据。详见
+    <a href="./privacy.html">《隐私政策》</a>。</p>
+
+    <h2>怎么备份数据 / 换新 iPhone 怎么迁移？</h2>
+    <p>数据保存在 App 的本地存储里，所以做整机备份（iCloud 备份或电脑备份）时会被一起备份，
+    换机恢复后会一起回来。也可以在 <em>设置 → 导出</em> 里导出 PDF / Excel 记录（Pet Diary Pro 功能）。</p>
+
+    <h2>怎么取消订阅？</h2>
+    <p>在 iPhone 上打开 <em>设置 → Apple ID → 订阅</em>（或点
+    <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">管理订阅</a>）
+    取消。取消只停止下次续订，已付的这一期仍然可以用到结束。删除 App 不会取消订阅。</p>
+
+    <h2>已经付款但功能没解锁怎么办？</h2>
+    <p>打开「设置 → Pet Diary Pro → 恢复购买」。请确认用的是购买时使用的同一个 Apple ID。</p>
+
+    <h2>哪些免费，哪些需要 Pet Diary Pro？</h2>
+    <p>免费：1 只宠物、全部记录、提醒、相册、日记、科普内容、附近服务。
+    Pro 解锁：不限数量宠物 + PDF / Excel 报告导出。</p>
+
+    <h2>App 为什么要这些权限？</h2>
+    <ul>
+      <li><strong>相册</strong>——给宠物档案、照片墙和日记添加图片。选中的照片会被复制进 App。</li>
+      <li><strong>定位</strong>——查找附近的宠物医院/宠物店，以及给日记记录地点。可拒绝，其他功能不受影响。</li>
+      <li><strong>麦克风</strong>——仅用于录制宠物叫声，之后在封面播放。可拒绝。</li>
+      <li><strong>通知</strong>——你创建的疫苗、驱虫等提醒到点通知。可选。</li>
+    </ul>
+    <p>以上权限随时可在 <em>iOS 设置 → Pet Diary</em> 里修改。</p>
+
+    <h2>怎么彻底删除数据？</h2>
+    <p><em>设置 → 清空全部数据</em> 会删除本机的全部宠物、照片、记录与日记，且无法恢复，
+    需要留存请先导出报告。删除 App 同样会清空本机数据。</p>
+
+    <h2>App 里的健康内容是医疗建议吗？</h2>
+    <p>不是。内置科普内容与养护建议均为通用养护信息，<strong>不能替代兽医诊断</strong>。
+    如果宠物出现异常，请及时联系执业兽医。</p>
+
+    <h2>联系我们</h2>
+    <p>邮箱：<a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a><br>
+    反馈问题时，附上你的机型和 iOS 版本、App 版本，能帮我们更快定位。</p>
+  </main>
+
+  <!-- ============ 繁體中文 ============ -->
+  <main id="lang-zh-hant" hidden>
+    <div class="callout">
+      <strong>需要協助？</strong>寄信到
+      <a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a>，
+      我們通常會在 1–2 個工作日內回覆。
+    </div>
+
+    <p>Pet Diary（寵物日記）是一款 iPhone 上的寵物健康記錄與日記 App。以下是大家最常問的問題，
+    如果這裡沒有你要的答案，直接寄信給我們就好。</p>
+
+    <h2>我的資料存在哪裡？會上傳嗎？</h2>
+    <p>所有寵物檔案、照片、記錄、日記與錄製的叫聲都<strong>只存在這台裝置上</strong>，
+    不會上傳給我們或任何伺服器——我們沒有後端，也看不到你的資料。詳見
+    <a href="./privacy.html">隱私政策</a>。</p>
+
+    <h2>如何備份資料或換到新 iPhone？</h2>
+    <p>資料位於 App 的本機儲存空間，因此會包含在完整的 iPhone 備份（iCloud 備份或電腦備份）中，
+    與 App 一起還原。你也可以在 <em>設定 → 匯出</em> 匯出 PDF / Excel 報告（Pet Diary Pro 功能）。</p>
+
+    <h2>如何取消訂閱？</h2>
+    <p>在 iPhone 上開啟 <em>設定 → Apple ID → 訂閱項目</em>（或點
+    <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">管理訂閱</a>）取消。
+    取消只會停止下一次續訂，已付費的期間仍可使用到結束。刪除 App 並不會取消訂閱。</p>
+
+    <h2>已付款但功能未解鎖怎麼辦？</h2>
+    <p>開啟 <em>設定 → Pet Diary Pro → 恢復購買</em>，並確認已登入購買時使用的同一個 Apple ID。</p>
+
+    <h2>哪些免費？哪些需要 Pet Diary Pro？</h2>
+    <p>免費：1 隻寵物、全部記錄、提醒、相簿、日記、科普內容與附近服務。
+    Pet Diary Pro 解鎖：不限寵物數量與 PDF / Excel 報告匯出。</p>
+
+    <h2>App 為什麼要求這些權限？</h2>
+    <ul>
+      <li><strong>照片</strong>——加入寵物頭像、相簿與日記的照片。</li>
+      <li><strong>位置</strong>——尋找附近的動物醫院與寵物店，以及記錄日記地點。可拒絕。</li>
+      <li><strong>麥克風</strong>——僅用於錄製寵物叫聲並在封面播放。可拒絕。</li>
+      <li><strong>通知</strong>——你建立的疫苗、驅蟲等提醒。可選。</li>
+    </ul>
+    <p>隨時可在 <em>iOS 設定 → Pet Diary</em> 調整。</p>
+
+    <h2>如何刪除所有資料？</h2>
+    <p><em>設定 → 清除全部資料</em> 會刪除此裝置上的所有寵物、照片、記錄與日記，且無法復原，
+    需要留存請先匯出報告。刪除 App 也會清除本機資料。</p>
+
+    <h2>App 內的健康內容算醫療建議嗎？</h2>
+    <p>不算。內建科普內容與照護建議為一般飼養資訊，<strong>無法取代獸醫診斷</strong>。
+    若寵物出現異常，請盡快聯絡獸醫。</p>
+
+    <h2>聯絡我們</h2>
+    <p>Email：<a href="mailto:guolianghao12345@hotmail.com">guolianghao12345@hotmail.com</a><br>
+    回報問題時，附上你的機型、iOS 版本與 App 版本，能協助我們更快處理。</p>
+  </main>
+
+  <footer>© 2026 Pet Diary · 宠物日记</footer>
+</div>
+
+<script>
+  var LANGS = ['en', 'zh', 'zh-hant'];
+  var TITLES = { en: 'Support', zh: '支持与帮助', 'zh-hant': '支援與協助' };
+  var HID = { 'zh-hant': 'lang-zh-hant' };
+  function setLang(lang) {
+    LANGS.forEach(function (code) {
+      var el = document.getElementById(HID[code] || ('lang-' + code));
+      if (el) el.hidden = code !== lang;
+      var btn = document.getElementById('btn-' + code);
+      if (btn) btn.classList.toggle('active', code === lang);
+    });
+    document.getElementById('title').textContent = TITLES[lang];
+    document.documentElement.lang = lang;
+  }
+  if ((navigator.language || '').toLowerCase().startsWith('zh')) {
+    var nav = (navigator.language || '').toLowerCase();
+    setLang(nav.indexOf('hant') > -1 || nav.indexOf('tw') > -1 || nav.indexOf('hk') > -1 ? 'zh-hant' : 'zh');
+  }
+</script>
+</body>
+</html>
